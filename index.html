@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog AR Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header>
+    <p class="tag">LiDAR Scan × Web AR</p>
+    <h1>Dog AR Project</h1>
+    <p class="lead">iPhone 14 Proでスキャンした愛犬を、Web上で3D / AR表示するプロジェクトです。</p>
+  </header>
+
+  <main>
+    <section class="viewer-card">
+      <model-viewer
+        src="models/dog.glb"
+        ios-src="models/dog.glb"
+        alt="3D model of my dog"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        shadow-intensity="1"
+        exposure="1"
+        environment-image="neutral"
+        class="dog-viewer">
+      </model-viewer>
+
+      <div class="info">
+        <h2>My Dog in AR</h2>
+        <p>LiDARスキャンで作成した愛犬の3Dモデルです。スマートフォンではARボタンから現実空間に表示できます。</p>
+        <p class="hint">GitHub Pages URL: https://yvrwwq9bgt-ai.github.io/Repository-name-dog-ar-project-/</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div><h3>Tools</h3><p>iPhone 14 Pro / Blender / GitHub Pages / model-viewer</p></div>
+      <div><h3>Model</h3><p>models/dog.glb を読み込んで表示します。</p></div>
+      <div><h3>AR</h3><p>iPhoneやAndroidの対応端末でAR表示できます。</p></div>
+    </section>
+  </main>
+
+  <footer><p>Created with iPhone 14 Pro, Blender and GitHub Pages.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
